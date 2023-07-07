@@ -25,6 +25,9 @@ export function NewTransactionModal() {
         },
         {
           withCredentials: true,
+          headers: {
+            'Access-Control-Allow-Origin': '*',
+          },
         },
       )
       .then(() => {
