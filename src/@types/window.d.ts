@@ -1,7 +1,7 @@
 export {}
 
 declare global {
-  interface Window {
+  export interface Window {
     my_modal_1: {
       showModal: () => void
       close: () => void
