@@ -18,7 +18,7 @@ export function NewTransactionModal() {
 
     await axios
       .post(
-        'https://transactions-api-rest-node.onrender.com/transactions',
+        `${process.env.NEXT_PUBLIC_API}/transactions`,
         {
           text,
           amount: Number(amount),

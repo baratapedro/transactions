@@ -15,7 +15,7 @@ export function DeleteTransactionModal() {
   async function handlerDeleteTransaction() {
     setIsLoading(true)
     await axios.delete(
-      `https://transactions-api-rest-node.onrender.com/transactions/${transaction}`,
+      `${process.env.NEXT_PUBLIC_API}/transactions/${transaction}`,
     )
 
     setIsLoading(false)

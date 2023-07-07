@@ -19,7 +19,7 @@ export default async function Home() {
 
   if (sessionId) {
     const response = await axios.get(
-      `https://transactions-api-rest-node.onrender.com/transactions`,
+      `${process.env.NEXT_PUBLIC_API}/transactions`,
       {
         withCredentials: true,
         headers: {

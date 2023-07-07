@@ -28,7 +28,7 @@ export default async function TransactionDetails({
   const transactionId = params.id
 
   const response = await axios.get(
-    `https://transactions-api-rest-node.onrender.com/transactions/${transactionId}`,
+    `${process.env.NEXT_PUBLIC_API}/transactions/${transactionId}`,
     {
       withCredentials: true,
       headers: {

@@ -32,7 +32,7 @@ export default async function RootLayout({
 
   if (sessionId) {
     const response = await axios.get(
-      `https://transactions-api-rest-node.onrender.com/transactions/summary`,
+      `${process.env.NEXT_PUBLIC_API}/transactions/summary`,
       {
         withCredentials: true,
         headers: {
